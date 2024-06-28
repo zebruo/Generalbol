@@ -1,5 +1,5 @@
 <?php
-include 'connexion.php'; // Assurez-vous que ce fichier contient les détails de connexion à la base de données
+include 'config/connexion.php'; // Assurez-vous que ce fichier contient les détails de connexion à la base de données
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['gedcomFile'])) {
     $fileTmpPath = $_FILES['gedcomFile']['tmp_name'];

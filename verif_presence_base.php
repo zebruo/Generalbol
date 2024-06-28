@@ -372,7 +372,7 @@ if ( !empty( $duplicates ) ) {
 
 try {
     // Connexion à la base de données
-    include 'connexion.php';
+    include 'config/connexion.php';
 
 
     $conn = new PDO( "mysql:host=$servername;dbname=$dbname", $username, $password );

@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 <?php
 // Inclure le fichier de connexion à la base de données
-include 'connexion.php';
+include 'config/connexion.php';
 
 // Initialiser le tableau pour stocker les mariages
 $mariages = [];
@@ -77,7 +77,7 @@ $conn->close();
 </form>
 <?php
 // Inclure le fichier de connexion à la base de données
-include 'connexion.php';
+include 'config/connexion.php';
 
 if ( $_SERVER[ 'REQUEST_METHOD' ] === 'POST' ) {
     $confirmations = $_POST[ 'confirm' ] ?? [];
@@ -131,7 +131,7 @@ $conn->close();
 =======
 <?php
 // Inclure le fichier de connexion à la base de données
-include 'connexion.php';
+include 'config/connexion.php';
 
 // Initialiser le tableau pour stocker les mariages
 $mariages = [];
@@ -207,7 +207,7 @@ $conn->close();
 </form>
 <?php
 // Inclure le fichier de connexion à la base de données
-include 'connexion.php';
+include 'config/connexion.php';
 
 if ( $_SERVER[ 'REQUEST_METHOD' ] === 'POST' ) {
     $confirmations = $_POST[ 'confirm' ] ?? [];

@@ -1,15 +1,15 @@
 <?php
 $title = "Généralbol";
-include 'head.php';
+include 'config/head.php';
 ?>
 
 <body>
-    <?php include 'menu.php'; ?>
+    <?php include 'config/menu.php'; ?>
     <div class="statistics">
         <p>L’arbre généalogique est un outil précieux pour comprendre d’où nous venons et pour honorer la mémoire de nos ancêtres.<br>
             Dans notre cas, l’arbre se compose de quatre branches principales qui représentent les lignées familiales de Durel, Truffert, Hélaine et Leconte. </p>
         <?php
-        include 'connexion.php';
+        include 'config/connexion.php';
 
         // Requête pour le nombre total d'individus
         $sql_total = "SELECT COUNT(*) AS total FROM gedcom_data WHERE type = 'INDI'";

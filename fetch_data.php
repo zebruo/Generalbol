@@ -1,6 +1,6 @@
 <?php
 // Inclure le fichier de connexion à la base de données
-include 'connexion.php';
+include 'config/connexion.php';
 
 // Requête SQL pour récupérer les individus depuis la table gedcom_data, triés par last_name
 $sql = "SELECT * FROM gedcom_data ORDER BY last_name";

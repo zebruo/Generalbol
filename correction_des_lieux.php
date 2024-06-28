@@ -1,14 +1,14 @@
 <?php
 $title = "Correction des lieux";
-include 'head.php';
+include 'config/head.php';
 ?>
 
 <body>
-    <?php include 'menu.php'; ?>
+    <?php include 'config/menu.php'; ?>
     <h1>Correction des lieux</h1>
     <div class="container">
         <?php
-        include 'connexion.php';
+        include 'config/connexion.php';
 
         $results = [];
 

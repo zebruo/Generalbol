@@ -1,10 +1,10 @@
 <?php
 $title = "Liste des individus";
-include 'head.php';
+include 'config/head.php';
 ?>
 
 <body>
-    <?php include 'menu.php'; ?>
+    <?php include 'config/menu.php'; ?>
     <div class="container">
         <h1>Liste des individus</h1>
 
@@ -39,7 +39,7 @@ include 'head.php';
         </div>
         <div class="listIndi">
             <?php
-            include 'connexion.php';
+            include 'config/connexion.php';
 
             // Requête pour sélectionner les individus
             $sql = "SELECT first_name, last_name, sex, birth_date, death_date, is_deceased FROM gedcom_data WHERE type = 'INDI'";

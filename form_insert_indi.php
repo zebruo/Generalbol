@@ -1,10 +1,10 @@
 <?php
 $title = "Nouvelle Personne";
-include 'head.php';
+include 'config/head.php';
 ?>
 
 <body>
-    <?php include 'menu.php'; ?>
+    <?php include 'config/menu.php'; ?>
     <h1>Ajouter une personne</h1>
     <form action="http://Generalbol/insert_indi.php" method="post" class="flex-form">
         <div class="form-column">

@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 <?php
 // Inclure le fichier de connexion à la base de données
-include 'connexion.php';
+include 'config/connexion.php';
 
 // Initialiser la variable pour les messages
 $message = '';
@@ -68,10 +68,10 @@ $conn->close();
 ?>
 <?php
 $title = "Modifier une personne";
-include 'head.php';
+include 'config/head.php';
 ?>
 <body>
-<?php include 'menu.php'; ?>
+<?php include 'config/menu.php'; ?>
 <h1>Modifier une personne</h1>
 <form action="modify_indi.php?id=<?php echo $individual_id; ?>" method="post" class="flex-form">
     <div class="form-column">
@@ -178,7 +178,7 @@ include 'head.php';
 =======
 <?php
 // Inclure le fichier de connexion à la base de données
-include 'connexion.php';
+include 'config/connexion.php';
 
 // Initialiser la variable pour les messages
 $message = '';
@@ -245,10 +245,10 @@ $conn->close();
 ?>
 <?php
 $title = "Modifier une personne";
-include 'head.php';
+include 'config/head.php';
 ?>
 <body>
-<?php include 'menu.php'; ?>
+<?php include 'config/menu.php'; ?>
 <h1>Modifier une personne</h1>
 <form action="modify_indi.php?id=<?php echo $individual_id; ?>" method="post" class="flex-form">
     <div class="form-column">

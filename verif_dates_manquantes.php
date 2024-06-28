@@ -1,5 +1,5 @@
 <?php
-include 'connexion.php'; // Assurez-vous que ce fichier contient les détails de connexion à la base de données
+include 'config/connexion.php'; // Assurez-vous que ce fichier contient les détails de connexion à la base de données
 
 // Requête pour récupérer les enregistrements avec birth_date ou death_date manquantes
 $sql = "SELECT first_name, last_name, birth_date, death_date 
