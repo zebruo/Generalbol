@@ -73,37 +73,4 @@ François HÉBERT et Anne Marie Quesnet, le 28-05-1793
 Jean-Baptiste François TRUFFERT et Marie-Catherine LUCAS, le 28-05-1838
 
 Louis Yves HERVÉ et Odette Angélique Louise DUREL, le 30-05-1942
-
-UPDATE gedcom_data
-SET marriage_date = 
-    CASE
-        
-        WHEN last_name = 'LECONTE' AND first_name = 'Jean Désiré'  THEN '1871-04-05'
-        WHEN  last_name = 'GOHIN' AND first_name = 'Adelaïde Basilide' THEN '1871-04-05'
-        
-        WHEN last_name = 'DUREL' AND first_name = 'Éric Patrick Raymond Edouard'  THEN '2011-04-09'
-        WHEN  last_name = 'Cassier' AND first_name = 'Christine Isabelle Nathalie' THEN '2011-04-09'
-        
-        WHEN last_name = 'CALVY' AND first_name = 'Auguste Alfred'  THEN '1869-04-10'
-         WHEN last_name = 'JUMELIN' AND first_name = 'Marie Virginie Adélaïde' THEN '1869-04-10'
-         
-        WHEN last_name = 'DUREL' AND first_name = 'Raymond Alphonse Jean'  THEN '1931-04-11'
-         WHEN  last_name = 'TRUFFERT' AND first_name = 'Paulette Alphonsine Andrée' THEN '1931-04-11'
-         
-        WHEN last_name = 'JANOT' AND first_name = 'Pierre Elie'  THEN '1900-04-17'
-         WHEN last_name = 'PUGNAIRE' AND first_name = 'Marie' THEN '1900-04-17'
-         
-        WHEN last_name = 'Amiot' AND first_name = 'Jean Charle Felix'  THEN '1844-04-20'
-         WHEN  last_name = 'CALVY' AND first_name = 'Marie Augustine' THEN '1844-04-20'
-         
-        WHEN last_name = 'TRAVERT' AND first_name = 'Jean Michel'  THEN '1873-04-26'
-        WHEN last_name = 'Vaultier' AND first_name = 'Virginie Clémence' THEN '1873-04-26'
-        
-        WHEN last_name = 'DUREL' AND first_name = 'Victor Bienaimé'  THEN '1864-04-28'
-         WHEN  last_name = 'RIMER' AND first_name = 'Françoise Marie' THEN '1864-04-28'
-         
-        WHEN last_name = 'HÉBERT' AND first_name = 'René Auguste Ludovic'  THEN '1927-04-30'
-        WHEN  last_name = 'Tillault' AND first_name = 'Louise Eugénie Ernestine' THEN '1927-04-30'
-        ELSE marriage_date  -- Pour les autres lignes, conserve la valeur existante de mariage_date
-    END;
     
