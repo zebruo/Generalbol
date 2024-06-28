@@ -72,5 +72,9 @@ Jean Nicolas BONNISSENT et Bonne Victoire BONNISSENT, le 26-05-1789
 François HÉBERT et Anne Marie Quesnet, le 28-05-1793
 Jean-Baptiste François TRUFFERT et Marie-Catherine LUCAS, le 28-05-1838
 
+<<<<<<< HEAD
 Louis Yves HERVÉ et Odette Angélique Louise DUREL, le 30-05-1942
 AAA
+=======
+Louis Yves HERVÉ et Odette Angélique Louise DUREL, le 30-05-1942    
+>>>>>>> Generalbol/main
