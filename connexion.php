@@ -6,10 +6,9 @@ $password = "";
 $dbname = "genealogy";
 
 // Créer une connexion
-$conn = new mysqli( $servername, $username, $password, $dbname );
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Vérifier la connexion
-if ( $conn->connect_error ) {
-    die( "La connexion a échoué: " . $conn->connect_error );
+if ($conn->connect_error) {
+    die("La connexion a échoué: " . $conn->connect_error);
 }
-?>

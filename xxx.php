@@ -1,3 +1,4 @@
+=======
 <?php
 $title = "Nouvelle Personne";
 include 'head.php';
@@ -90,3 +91,4 @@ include 'head.php';
 </script>
 </body>
 </html>
+>>>>>>> origin/main
