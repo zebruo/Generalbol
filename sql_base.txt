@@ -1,0 +1,23 @@
+INSERT INTO `gedcom_data` (`id`, `type`, `gedcom_id`, `value`, `parent_id`, `first_name`, `last_name`, `sex`, `birth_date`, `birth_place`, `death_date`, `death_place`, `occupation`, `notes`, `is_deceased`) VALUES
+(31, 'INDI', 1, 'Individu avec des ancêtres célèbres', NULL, 'Jean', 'Dupont', 'M', '1947-03-15', 'Paris, France', '1999-04-23', 'Lyon, France', 'Historien', 'Passionné par l\'histoire de sa région', 1),
+(32, 'INDI', 2, 'Membre d\'une association historique', 31, 'Michel', 'Durand', 'M', '1955-07-22', 'Marseille, France', '2010-01-30', 'Toulouse, France', 'Archéologue', 'A participé à de nombreuses fouilles', 1),
+(33, 'INDI', 3, 'Collectionneur d\'art', 31, 'Pierre', 'Leroy', 'M', '1960-02-01', 'Nantes, France', '2015-05-18', 'Bordeaux, France', 'Galeriste', 'Expert en art moderne', 1),
+(34, 'INDI', 4, 'Passionné de généalogie', 32, 'Alain', 'Moreau', 'M', '1972-09-03', 'Lille, France', '2020-07-04', 'Nice, France', 'Généalogiste', 'A rédigé plusieurs ouvrages sur la généalogie familiale', 1),
+(35, 'INDI', 5, 'Auteur d\'un livre sur l\'histoire familiale', 33, 'Louis', 'Martin', 'M', '1980-06-17', 'Strasbourg, France', '2021-12-12', 'Montpellier, France', 'Écrivain', 'Spécialisé dans les biographies historiques', 1),
+(36, 'INDI', 6, 'Individu vivant', NULL, 'Paul', 'Bernard', 'M', '1990-08-29', 'Clermont-Ferrand, France', NULL, NULL, 'Informaticien', 'Développeur de logiciels pour la généalogie', 0),
+(37, 'INDI', 7, 'Archiviste reconnue', 34, 'Marie', 'Petit', 'F', '1950-05-05', 'Le Mans, France', '2000-11-11', 'Reims, France', 'Archiviste', 'Conservatrice d\'un fonds d\'archives privées', 1),
+(38, 'INDI', 8, 'Biographe', 35, 'Anne', 'Roux', 'F', '1965-02-14', 'Dijon, France', '2015-10-07', 'Angers, France', 'Biographe', 'Auteur de plusieurs biographies de personnalités', 1),
+(39, 'INDI', 9, 'Individu vivant', NULL, 'Julie', 'Vincent', 'F', '1975-01-21', 'Brest, France', NULL, NULL, 'Journaliste', 'Spécialiste des sujets culturels', 0),
+(40, 'INDI', 10, 'Expert en héraldique', 36, 'Isabelle', 'Lefebvre', 'F', '1985-10-09', 'Grenoble, France', '2022-03-19', 'Caen, France', 'Héraldiste', 'Référence dans l\'étude des blasons', 1);
+
+
+et pour les mariages
+
+INSERT INTO `gedcom_data` (`id`, `type`, `gedcom_id`, `value`, `parent_id`, `first_name`, `last_name`, `sex`, `birth_date`, `birth_place`, `death_date`, `death_place`, `occupation`, `notes`, `marriage_date`, `marriage_place`, `is_deceased`) VALUES
+(41, 'FAM', NULL, 'Mariage entre Jean Dupont et Marie Petit', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Premier mariage enregistré', '1970-07-20', 'Rennes, France', NULL),
+(42, 'FAM', NULL, 'Mariage entre Michel Durand et Anne Roux', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Union célébrée dans la ville natale', '1980-06-15', 'Tours, France', NULL),
+(43, 'FAM', NULL, 'Mariage entre Pierre Leroy et Julie Vincent', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Cérémonie intime et familiale', '1990-05-22', 'Amiens, France', NULL),
+(44, 'FAM', NULL, 'Mariage entre Alain Moreau et Isabelle Lefebvre', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Mariage dans une ancienne chapelle', '2000-04-30', 'Limoges, France', NULL),
+(45, 'FAM', NULL, 'Mariage entre Louis Martin et Marie Petit', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Renouvellement de vœux', '2010-12-12', 'Nîmes, France', NULL),
+(46, 'FAM', NULL, 'Mariage entre Paul Bernard et Anne Roux', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Mariage civil suivi d\'une grande réception', '2020-09-18', 'Le Havre, France', NULL),
+(47, 'FAM', NULL, 'Mariage entre Jean Dupont et Julie Vincent', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Deuxième mariage pour chacun', '1975-08-05', 'Saint-Étienne, France', NULL);

@@ -1,0 +1,195 @@
+/* Importer une police de caractères moderne */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+.menu {
+    background-color: #3A3A3A;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+.menu a:hover {
+    color: #ff6347; /* Changer cette couleur selon votre préférence */
+}
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.listIndi {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    justify-content: flex-start;
+}
+.person {
+    border: 1px solid #ccc;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #f9f9f9;
+}
+.person h2 {
+    font-size: 14px;
+}
+.small-text {
+    font-size: 0.9em; /* taille date liste indi */
+    color: #5B5B5B; /* Optionnel : changez la couleur si nécessaire */
+}
+.person-male {
+    border-color: #3498db;
+}
+.person-female {
+    border-color: #e74c3c;
+}
+.flex-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-column {
+    flex: 1;
+    min-width: 300px;
+}
+.form-column label, .form-column input, .form-column select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form-actions {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border: 6px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.statistics p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 1em;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ff6347;
+    width: 12%;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+button:hover {
+    background-color: #FF9987;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+}
+.form-group label {
+    flex: 1;
+    margin-right: 10px;
+}
+.form-group input[type="text"] {
+    flex: 2;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.results {
+    padding: 15px;
+    background-color: #e9f5e9;
+    border: 1px solid #28a745;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.alphabet-filter {
+    text-align: center;
+    margin: 18px 0;
+}
+.alphabet-filter a {
+    display: inline-block;
+    margin: 4px;
+    padding: 8px 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+.alphabet-filter a:hover {
+    /*background-color: #FF9987;
+    color: white;*/
+    border-color: #2B2B2B;
+}
+.alphabet-filter a.active {
+    background-color: #FF9987;
+    color: white;
+    border-color: #ff6347;
+}

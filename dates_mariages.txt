@@ -1,0 +1,109 @@
+
+Janvier
+
+Alexandre Jean-Baptiste TRUFFERT et Marie Augustine LECARPENTIER, le 07-01-1899
+
+Jean-Baptiste Eugène CALVY et Virginie Céleste BESSELIEVRE, le 08-01-1836
+
+Pierre NAVET et Marie-Françoise VALQUIER, le 13-01-1761
+
+Léonord VAULTIER et Geneviève Auvray, le 26-01-1839
+
+Février
+
+Pierre Alexandre BENOIT et Jeanne Françoise Antoinette LEPOITTEVIN, le 04-02-1850
+
+Jean Charles NAVET et Marie Suzanne Delacotte, le 08-02-1729
+
+Frédéric François HÉLAINE et Rosalie Adélaïde FOSSARD, le 09-02-1865
+
+Jean Pierre François Hélaine et Anne, Françoise Horel, le 13-02-1821
+
+Jules Auguste DUREL et Blanche Victorine Alphonsine TRAVERT, le 13-02-1904
+
+Philippe TRAVERT et Marie Magdeleine Letourneur, le 16-02-1773
+
+Jean-Baptiste Gratien TRUFFERT et Marie-Françoise QUEVASTRE, le 16-02-1806
+
+Charles Hyacinthe LETELLIER et Adèle Marie Louise CALVY, le 26-02-1854
+
+Ludovic Albert Jules HÉBERT et Angéline Marie GROUSSARD, le 27-02-1897
+
+Mars
+
+Jacques Nicolas BENOIST et Bonne Françoise BUHOT, le 27-03-1808
+
+Avril
+
+
+Jean Désiré LECONTE et Adelaïde Basilide GOHIN, le 05-04-1871
+
+Éric Patrick Raymond Edouard DUREL et Christine Isabelle Nathalie Cassier, le 09-04-2011
+
+Auguste Alfred CALVY et Marie Virginie Adélaïde JUMELIN, le 10-04-1869
+
+Raymond Alphonse Jean DUREL et Paulette Alphonsine Andrée TRUFFERT, le 11-04-1931
+
+Pierre Elie JANOT et Marie PUGNAIRE, le 17-04-1900
+
+Jean Charle Felix Amiot et Marie Augustine CALVY, le 20-04-1844
+
+Jean Michel TRAVERT et Virginie Clémence Vaultier, le 26-04-1873
+
+Victor Bienaimé DUREL et Françoise Marie RIMER, le 28-04-1864
+
+René Auguste Ludovic HÉBERT et Louise Eugénie Ernestine Tillault, le 30-04-1927
+
+Mai
+
+Emile Frédéric Ferdinand HÉLAINE et Alphonsine Léontine Marie Rihouey, le 02-05-1927
+
+Pierre Aimable Gabriel DUREL et Marie-Victoire LE GERRIES, le 07-05-1806
+
+Jean Baptiste Joseph PEPINO et Léonie Adèle Henriette DUREL, le 11-05-1882
+
+? ? et Anne Marie Quesnet, le 19-05-1793
+Louis Léopold Jean DUREL et Madeleine STRAGIER, le 19-05-1923
+
+André Jules Félix TRUFFERT et Jeanne Marie Rose LE MONNIER, le 20-05-1933
+
+Jean Nicolas BONNISSENT et Bonne Victoire BONNISSENT, le 26-05-1789
+
+François HÉBERT et Anne Marie Quesnet, le 28-05-1793
+Jean-Baptiste François TRUFFERT et Marie-Catherine LUCAS, le 28-05-1838
+
+Louis Yves HERVÉ et Odette Angélique Louise DUREL, le 30-05-1942
+
+UPDATE gedcom_data
+SET marriage_date = 
+    CASE
+        
+        WHEN last_name = 'LECONTE' AND first_name = 'Jean Désiré'  THEN '1871-04-05'
+        WHEN  last_name = 'GOHIN' AND first_name = 'Adelaïde Basilide' THEN '1871-04-05'
+        
+        WHEN last_name = 'DUREL' AND first_name = 'Éric Patrick Raymond Edouard'  THEN '2011-04-09'
+        WHEN  last_name = 'Cassier' AND first_name = 'Christine Isabelle Nathalie' THEN '2011-04-09'
+        
+        WHEN last_name = 'CALVY' AND first_name = 'Auguste Alfred'  THEN '1869-04-10'
+         WHEN last_name = 'JUMELIN' AND first_name = 'Marie Virginie Adélaïde' THEN '1869-04-10'
+         
+        WHEN last_name = 'DUREL' AND first_name = 'Raymond Alphonse Jean'  THEN '1931-04-11'
+         WHEN  last_name = 'TRUFFERT' AND first_name = 'Paulette Alphonsine Andrée' THEN '1931-04-11'
+         
+        WHEN last_name = 'JANOT' AND first_name = 'Pierre Elie'  THEN '1900-04-17'
+         WHEN last_name = 'PUGNAIRE' AND first_name = 'Marie' THEN '1900-04-17'
+         
+        WHEN last_name = 'Amiot' AND first_name = 'Jean Charle Felix'  THEN '1844-04-20'
+         WHEN  last_name = 'CALVY' AND first_name = 'Marie Augustine' THEN '1844-04-20'
+         
+        WHEN last_name = 'TRAVERT' AND first_name = 'Jean Michel'  THEN '1873-04-26'
+        WHEN last_name = 'Vaultier' AND first_name = 'Virginie Clémence' THEN '1873-04-26'
+        
+        WHEN last_name = 'DUREL' AND first_name = 'Victor Bienaimé'  THEN '1864-04-28'
+         WHEN  last_name = 'RIMER' AND first_name = 'Françoise Marie' THEN '1864-04-28'
+         
+        WHEN last_name = 'HÉBERT' AND first_name = 'René Auguste Ludovic'  THEN '1927-04-30'
+        WHEN  last_name = 'Tillault' AND first_name = 'Louise Eugénie Ernestine' THEN '1927-04-30'
+        ELSE marriage_date  -- Pour les autres lignes, conserve la valeur existante de mariage_date
+    END;
+    

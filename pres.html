@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation des données GEDCOM</title>
+    <!-- Inclure Bootstrap pour des styles de base (facultatif) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Inclure jQuery (nécessaire pour AJAX) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Présentation des données GEDCOM</h1>
+        <div id="dataContainer"></div>
+    </div>
+
+    <script>
+        // Script JavaScript pour récupérer et afficher les données
+        $(document).ready(function() {
+            // Utilisation de jQuery pour AJAX
+            $.ajax({
+                url: 'fetch_data.php',  // Fichier PHP pour récupérer les données
+                type: 'GET',
+                dataType: 'json',  // Format de données attendu
+                success: function(response) {
+                    // Fonction exécutée en cas de succès de la requête
+                    if (response && response.length > 0) {
+                        // Construction de la structure HTML pour afficher les données
+                        let html = '<div class="row">';
+                        response.forEach(function(individual) {
+                            html += '<div class="col-md-4 mb-3">';
+                            html += '<div class="card">';
+                            html += '<div class="card-body">';
+                            html += '<h5 class="card-title">' + individual.last_name + ' ' + individual.first_name + '</h5>';
+                            html += '<p class="card-text"><strong>Sexe:</strong> ' + (individual.sex === 'M' ? 'Masculin' : (individual.sex === 'F' ? 'Féminin' : 'Inconnu')) + '</p>';
+                            html += '<p class="card-text"><strong>Statut:</strong> ' + (individual.is_deceased ? 'Décédé(e)' : 'En vie') + '</p>';
+                            html += '<p class="card-text"><strong>Date de naissance:</strong> ' + (individual.birth_date ? individual.birth_date : 'Non spécifiée') + '</p>';
+                            if (individual.is_deceased) {
+                                html += '<p class="card-text"><strong>Date de décès:</strong> ' + (individual.death_date ? individual.death_date : 'Non spécifiée') + '</p>';
+                            }
+                            html += '</div>';
+                            html += '</div>';
+                            html += '</div>';
+                        });
+                        html += '</div>';
+                        $('#dataContainer').html(html);  // Injecter le HTML dans la div avec id="dataContainer"
+                    } else {
+                        // Si aucune donnée n'est retournée
+                        $('#dataContainer').html('<p>Aucune donnée trouvée.</p>');
+                    }
+                },
+                error: function() {
+                    // Fonction exécutée en cas d'erreur de la requête
+                    $('#dataContainer').html('<p>Erreur lors du chargement des données.</p>');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

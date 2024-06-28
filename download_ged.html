@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uploader un fichier GEDCOM</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="menu">
+    <a href="list_indi.php">Liste des individus</a>
+    <a href="add_indi.php">Ajouter une personne</a>
+    <a href="correction_des_lieux.php">Correction des lieux</a>
+</div>
+
+<div class="upload-container">
+    <h1>Uploader un fichier GEDCOM</h1>
+    <form action="upload_gedcom.php" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="gedcomFile">Fichier GEDCOM:</label>
+            <input type="file" id="gedcomFile" name="gedcomFile" required>
+        </div>
+        <button type="submit">Uploader et Importer</button>
+    </form>
+</div>
+
+</body>
+</html>
+
